@@ -1,0 +1,57 @@
+{
+    "name": "touchbar-command",
+    "displayName": "touchbar-command",
+    "description": "Creates buttons on the macOS touch bar to run a terminal command",
+    "version": "0.0.1",
+    "publisher": "xrzx6ms3ig3lobv5jtmurml2caee64ga4dekneeposrbyxd2a5mq",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:touchbar-command.click"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "touchbar-command configuration",
+            "properties": {
+                "touchbar-command.command": {
+                    "type": "string",
+                    "default": "echo 'change me'",
+                    "description": "Command to be run when touchbar button is clicked"
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "touchbar-command.click",
+                "title": "Execute"
+            }
+        ],
+        "menus": {
+            "touchBar": [
+                {
+                    "command": "touchbar-command.click"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.6.1",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "node-cmd": "^3.0.0"
+    }
+}
