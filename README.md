@@ -4,7 +4,7 @@ Simple Visual Studio Code extension to allow for running a designated command wh
 ## Configuration
 In your `settings.json`, put:
 ```json
-"touchbar-command.command": "echo 'the command i want to run'"
+"touchbar-command.command": "command"
 ```
 
 ## Building
