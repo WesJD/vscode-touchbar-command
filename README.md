@@ -1,6 +1,12 @@
 # vscode-touchbar-command
 Simple Visual Studio Code extension to allow for running a designated command when clicking a button on the macOS touchbar.
 
+## Configuration
+In your `settings.json`, put:
+```json
+"touchbar-command.command": "echo 'the command i want to run'"
+```
+
 ## Building
 You are able to grab a default build [here](https://github.com/WesJD/vscode-touchbar-command/releases), but beware that the touchbar button will have the text of `Execute`. Install it with step #3 below.
 
